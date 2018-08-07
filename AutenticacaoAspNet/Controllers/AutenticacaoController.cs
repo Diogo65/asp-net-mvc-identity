@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Security.Claims;
+using AutenticacaoAspNet.Filters;
 
 namespace AutenticacaoAspNet.Controllers
 {
@@ -14,7 +15,10 @@ namespace AutenticacaoAspNet.Controllers
     {
         private UsuariosContext db = new UsuariosContext();
 
-        // GET: Autenticacao
+        //filtro customizado 
+        //TipoUsuario com os tipos autorizados, Classe Filter-AturizaçãoTupo
+        //Nome do Atributo(filtro) - Parâmetros do Atributo - Atributos entre colchetes
+        [AutorizacaoTipo(new[] { TipoUsuario.Administrador})]
         public ActionResult Cadastrar()
         {
             return View();
@@ -90,7 +94,9 @@ namespace AutenticacaoAspNet.Controllers
             var identity = new ClaimsIdentity(new[]
             {
                 new Claim(ClaimTypes.Name, usuario.Nome),
-                new Claim("Login", usuario.Login)
+                new Claim("Login", usuario.Login),
+                //Role, que é uma definição padrão para o papel/função do usuário.
+                new Claim(ClaimTypes.Role,usuario.Tipo.ToString())
             }, "ApplicationCookie");
 
             //criamos o cookie de autenticação usando o midleware do OWIN, Para isso passamos o ClaimsIdentity que acabamos de criar;

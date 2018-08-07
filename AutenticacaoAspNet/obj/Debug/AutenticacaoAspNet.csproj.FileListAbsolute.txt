@@ -34,3 +34,5 @@ C:\Users\Vector\Desktop\AutenticacaoAspNet\AutenticacaoAspNet\obj\Debug\Autentic
 C:\Users\Vector\Desktop\AutenticacaoAspNet\AutenticacaoAspNet\obj\Debug\AutenticacaoAspNet.csproj.CopyComplete
 C:\Users\Vector\Desktop\AutenticacaoAspNet\AutenticacaoAspNet\obj\Debug\AutenticacaoAspNet.dll
 C:\Users\Vector\Desktop\AutenticacaoAspNet\AutenticacaoAspNet\obj\Debug\AutenticacaoAspNet.pdb
+C:\Users\Vector\Desktop\AutenticacaoAspNet\AutenticacaoAspNet\obj\Debug\AutenticacaoAspNet.Migrations.CriaTipoUsuario.resources
+C:\Users\Vector\Desktop\AutenticacaoAspNet\AutenticacaoAspNet\obj\Debug\AutenticacaoAspNet.csproj.GenerateResource.cache

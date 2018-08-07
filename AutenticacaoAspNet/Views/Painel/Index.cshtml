@@ -11,3 +11,17 @@
         @TempData["Mensagem"]
     </div>
 }
+
+@if(ViewBag.Mensagem != null)
+{
+    <div class="alert alert-warning">
+        @ViewBag.Mensagem
+    </div>
+}
+
+@if(TempData["ErrorAtutorizacao"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorAutorizacao"]
+    </div>
+}
